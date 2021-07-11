@@ -1,7 +1,12 @@
-body{
+@font-face {
+  font-family:'Raleway';
+  src:url("font\Raleway_800\Raleway-VariableFont_wght.ttf");
+}
+
+body{ 
   font-size: 20px;
   padding: 10px;
-  margin: 15px;
+  margin: 10px;
 }
 
 p{
@@ -39,7 +44,7 @@ a{
  /*
  * Custom translucent site header
  */
-
+ 
 .site-header {
   background-color:#050202;
   -webkit-backdrop-filter: saturate(180%) blur(20px);
@@ -57,7 +62,7 @@ a{
   color: rgba(0,0,0,.5);
 }
 
-/*
+/* 
 */
 nav.shift ul li a {
   position:relative;
@@ -128,13 +133,12 @@ nav.shift ul li a:hover:after {
 /*
  * Extra utilities
  */
-
-.flex-equal > * {
+.flex-md-equal > * {
   -ms-flex: 1;
   flex: 1;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 600) {
   .flex-md-equal > * {
     -ms-flex: 1;
     flex: 1;
@@ -144,8 +148,3 @@ nav.shift ul li a:hover:after {
 .overflow-hidden { overflow: hidden; }
 
 
-
-/*
- * Extra imagens
- https://www.linhadecomando.com/css/css-sobrepondo-uma-imagem-com-uma-imagem-transparente-png
- */
