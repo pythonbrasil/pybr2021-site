@@ -19,27 +19,26 @@
   <body class="container">
     <div id=home></div>
     <nav class="shift navbar navbar-expand-lg navbar-light bg-white sticky-top">
-      <img src="assets\img\logo-python.png" width="110px%" height="100px"/>
+      <a class="nav-link" href="#home">
+        <img src="assets\img\logo-python.png" width="110px%" height="100px"/>
+      </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end " id="navbarNavDropdown">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav">          
           <li class="nav-item">
-            <a class="nav-link" href="#home">Home</a>
+            <a class="nav-link" href="#evento">Sobre</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#evento">Evento</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#programacao">Programação</a>
+            <a class="nav-link" href="#submissao">Submissões</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#patrocinio">Patrocínio</a>
-          </li>
+          </li> 
           <li class="nav-item">
-            <a class="nav-link" href="#">Ingressos</a>
-          </li>
+            <a class="nav-link" href="#codigoconduta">Código de conduta</a>
+          </li>         
         </ul>
       </div>
     </nav>
@@ -48,14 +47,16 @@
       <div class="bg-white col-md-6 text-center overflow-hidden">
         <div class="my-3 p-3 text-center">
           <br>
-          <h2 class="display-4 font-weight-bold">Evento on-line <br>11 a 17 de outubro</h2>
+          <h2 class="display-4 font-weight-bold">Python Brasil online</h2>
+          <h3 class="display-4">11 a 17 out. 21</h3>
           <img style="z-index: 32; left: -170px; position: relative;" alt="bottom image" src="assets/img/section_0/eclipse-top-3.png">
-          <p class="lead font-weight-normal text-center">A Python Brasil 2020 é a maior conferência <br>
-          sobre linguagem de programação Python do <br>Brasil e da América Latina.</p>
-          <div class= "">
+          <p class="lead font-weight-normal text-center">A Python Brasil 2021 é a maior conferência
+          sobre linguagem de programação Python do Brasil e da América Latina.</p>
+
+          <!-- <div class= "">
             <a class="btn btn-outline-secondary btn-lg" href="#">Adquira seu ingresso!</a>
             <img style="z-index: 32; top: 32px; left: 60px; position: relative;" alt="bottom image" src="assets/img/section_0/eclipse-top-2.png">
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="bg-white col-md-6 text-center text-white overflow-hidden">
@@ -90,14 +91,14 @@
         <img style="z-index: 32; left: 150px; position: relative;" alt="bottom image" src="assets/img/section_0/eclipse-top-2.png">
       </div>
     </div>
-    <div id=programacao></div>
+    <div id=submissao></div>
     <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
       <div style="background-color:#e3e5e6c2" class="col-md-6 text-center overflow-hidden">
         <div class="my-3 p-3">
           <img style="z-index: 32; left: 130px; position: relative;" alt="bottom image" src="assets/img/section_2/sec2_1.png">
-          <h2 class="display-5 font-weight-bold my-3 p-3" >PROGRAMAÇÃO</h2>
-          <p class="lead my-3 p-3">Fique ligado nas palestras, mesas redondas<br> e os keynotes dessa edição!</p>
-          <a class="btn btn-outline-secondary btn-lg" href="#">Adquira seu ingresso!</a>
+          <h2 class="display-5 font-weight-bold my-3 p-3" >SUBMISSÃO DE ATIVIDADES</h2>
+          <p class="lead my-3 p-3">Submeta aqui sua atividade: palestras, tutorial e sprint.</p>
+          <a class="btn btn-outline-secondary btn-lg" href="https://forms.gle/aSxwwGekZpTs9k9K6">Enviar atividade</a>
         </div>
         <img style="z-index: 32; left: -140px; position: relative;" alt="bottom image" src="assets/img/section_2/sec2_3.png">
       </div>
@@ -114,7 +115,7 @@
       <div class="mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
         <img style="z-index: 32; left: -150px; position: relative;" alt="bottom image" src="assets/img/section_2/sec2_2.png">
         <div class="my-3 p-3 text-center">
-          <h4>Veja mais sobre no nosso <br>
+          <h4>Saiba mais sobre no nosso <br>
           <strong>Plano de Patrocínio! <br>(<a style="color:#5956E9" href="/plano-patrocinio-pybr2021.pdf">pt-br</a>
             / <a style="color:#5956E9" href="/sponsorship-plan-pybr2021.pdf">en</a>)
           </strong></h4>
@@ -124,18 +125,19 @@
 
       <div style="background-color:#fab8c5" class="text-center overflow-hidden">
         <div class="my-3 py-3">
-          <h4 class="lead font-weight-bold my-3 p-3" style="color:#5956E9">Patrocinadores do evento</h4>
-          <h2 class="display-5 font-weight-bold">Venha fazer parte do nosso <br>time de patrocinadores</h2>
+          <h4 class="lead font-weight-bold my-3 p-3" style="color:#5956E9">Patrocinadoras do evento</h4>
+          <h2 class="display-5 font-weight-bold">Venha ser uma <br> empresa patrocinadora do evento</h2>
           <br>
         </div>
       </div>
     </div>
 
+    <div id=codigoconduta></div>
     <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
       <div style="background-color:#e3e5e6c2" class="col-md-6 text-center overflow-hidden">
         <div class="my-3 p-3">
           <h2 class="display-5 my-3 p-3 " style="color: #5956E9;">Todas as pessoas que participam da Python Brasil devem concordar
-          em seguir as orientações especificadas no Código de Conduta.
+          em seguir o nosso Código de Conduta.
         </div>
         <a class="btn btn-outline-secondary btn-lg" href="https://python.org.br/cdc/">Código de Conduta</a>
       </div>
