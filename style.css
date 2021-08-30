@@ -3,7 +3,7 @@
   src:url("font\Raleway_800\Raleway-VariableFont_wght.ttf");
 }
 
-body{ 
+body{
   font-size: 20px;
   padding: 10px;
   margin: 10px;
@@ -23,7 +23,7 @@ a{
 }
 
 .container {
-  max-width: 960px;
+  max-width: 1140px;
 }
 
 .btn-outline-secondary{
@@ -36,6 +36,16 @@ a{
   border-color: #5956E9; /*set the color you want here*/
 }
 
+.border-5 {
+  border-width:5px !important;
+}
+
+
+.anchor::before{
+  height: 130px;
+  content: "";
+  display:block;
+}
  /*
  * Image overlay button
  */
@@ -44,7 +54,7 @@ a{
  /*
  * Custom translucent site header
  */
- 
+
 .site-header {
   background-color:#050202;
   -webkit-backdrop-filter: saturate(180%) blur(20px);
@@ -62,7 +72,7 @@ a{
   color: rgba(0,0,0,.5);
 }
 
-/* 
+/*
 */
 nav.shift ul li a {
   position:relative;
