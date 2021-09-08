@@ -158,3 +158,16 @@ nav.shift ul li a:hover:after {
 .overflow-hidden { overflow: hidden; }
 
 
+/*
+ * Footer and social medias
+ */
+footer .social-icons {
+  display: inline-block;
+  margin: 5px;
+}
+
+footer .social-icons svg {
+  fill: #476088;
+  width: 35px;
+  height: 35px;
+}
