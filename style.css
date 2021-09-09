@@ -28,12 +28,12 @@ a{
 
 .btn-outline-secondary{
   color: #050202;
-  border-color: #5956E9; /*set the color you want here*/
+  border-color: #476088; /*set the color you want here*/
 }
 .btn-outline-secondary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
   color: #fff;
-  background-color: #5956E9;
-  border-color: #5956E9; /*set the color you want here*/
+  background-color: #476088;
+  border-color: #476088; /*set the color you want here*/
 }
 
 .border-5 {
@@ -65,11 +65,14 @@ a{
   transition: ease-in-out color .15s;
 }
 .site-header a:hover {
-  color: #5956E9;
+  color: #476088;
   text-decoration: none;
 }
 .navbar-light .navbar-nav .nav-link {
   color: rgba(0,0,0,.5);
+}
+.navbar-light .navbar-nav .nav-link:hover {
+  color: rgba(255, 255, 255, 1);
 }
 
 /*
@@ -91,7 +94,7 @@ nav.shift ul li a:after {
   height: 1px;
   content: '.';
   color: transparent;
-  background: #5956E9;
+  background: #476088;
   visibility: none;
   opacity: 0;
   z-index: -1;
