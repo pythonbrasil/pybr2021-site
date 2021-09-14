@@ -198,7 +198,7 @@ nav.shift ul li a:hover:after {
 
 .sponsor.gold .entity img {
   max-width: 300px;
-  max-height: 300px;
+  max-height: 60px;
 }
 
 .sponsor.silver {
@@ -207,7 +207,7 @@ nav.shift ul li a:hover:after {
 
 .sponsor.silver .entity img {
   max-width: 225px;
-  max-height: 225px;
+  max-height: 60px;
 }
 
 /*
