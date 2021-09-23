@@ -178,7 +178,7 @@ nav.shift ul li a:hover:after {
   margin: 0 auto 20px;
   border-radius: 50%;
   border: 2px #476088 solid;
-  background-size: contain;
+  background-size: cover;
   background-position: 50%;
   position: relative;
 }
@@ -225,19 +225,33 @@ nav.shift ul li a:hover:after {
     display: grid;
   }
 
-  .keynoter:nth-child(2n) {
-    grid-template-columns: 280px auto 0;
-  }
-
-  .keynoter .content {
-
-    text-align: left;
-  }
-
   .keynoter .photo {
     height: 280px;
     max-width: 280px;
     margin: 0;
+  }
+
+  .keynoter.box-left {
+    grid-template-columns: 280px auto 0;
+  }
+
+  .keynoter.box-left .content {
+    text-align: left;
+  }
+
+  .keynoter.box-right {
+    grid-template-columns: 0 auto 280px;
+  }
+
+  .keynoter.box-right .photo {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .keynoter.box-right .content {
+    text-align: right;
+    grid-column: 2;
+    grid-row: 1;
   }
 }
 
