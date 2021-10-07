@@ -1,5 +1,4 @@
 module.exports = {
-  distDir: "build",
   target: "serverless",
   async rewrites() {
     return [
