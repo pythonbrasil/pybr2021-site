@@ -60,7 +60,7 @@ class Event extends Component {
         "border-gray-100",
       ]).join(" "),
       "hover": hoverClasses.concat([
-        "hover:border-blue-300",
+        "hover:border-opacity-15",
       ]).join(" "),
     };
   }
@@ -86,22 +86,46 @@ class Event extends Component {
     );
   }
 
+  isKeynote(type) {
+    return type == "keynote" || type == "panel";
+  }
+
+  renderKeynote(summary, description) {
+    return (
+      <div className="font-medium">
+        <div className="font-bold text-lg text-gray-600">{summary}</div>
+        {description && <div>{description}</div>}
+      </div>
+    );
+  }
+
+  renderSummary(type, summary, description) {
+    if (this.isKeynote(type)) return this.renderKeynote(summary, description);
+
+    return (
+      <div className="font-medium">
+        <div>{summary}</div>
+        {type == "keynote" && <div>{description}</div>}
+      </div>
+    );
+  }
+
+
   render() {
-    const location = this.props.event.location;
-    const author = this.props.event.extendedProperties.private.author;
-    const live_url = this.props.event.extendedProperties.private.youtube_channel;
+    const {summary, description, location} = this.props.event;
+    const {type, author, youtube_channel} = this.props.event.extendedProperties.private;
 
     const colors = this.getColors(location);
     return (
       <div className={`flex xl:flex-1 flex-col space-y-1 py-4 px-4 ${colors.base} ${colors.hover} ${location}`}>
         <div className={`xl:flex-grow xl:mb-6`}>
-          <div className="font-medium">{this.props.event.summary}</div>
+          {this.renderSummary(type, summary, description)}
         </div>
         <div className="flex text-sm flex-col space-y-1">
           {author && this.renderLabel("🐍", author)}
           {location && this.renderLabel("📍", location)}
           <div className="flex-grow xl:hidden"></div>
-          <div>🎬 {this.renderLive(live_url)}</div>
+          <div>🎬 {this.renderLive(youtube_channel)}</div>
         </div>
       </div>
     );
