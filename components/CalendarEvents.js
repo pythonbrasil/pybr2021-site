@@ -90,17 +90,18 @@ class Event extends Component {
     return type == "keynote" || type == "panel";
   }
 
-  renderKeynote(summary, description) {
+  renderKeynote(summary, description, type) {
+    const label = type == 'keynote' ? "Keynote" : "Roda de Conversa";
     return (
       <div className="font-medium">
-        <div className="font-bold text-lg text-gray-600">{summary}</div>
+        <div className="font-bold text-lg text-gray-600">{label}: {summary}</div>
         {description && <div>{description}</div>}
       </div>
     );
   }
 
   renderSummary(type, summary, description) {
-    if (this.isKeynote(type)) return this.renderKeynote(summary, description);
+    if (this.isKeynote(type)) return this.renderKeynote(summary, description, type);
 
     return (
       <div className="font-medium">
