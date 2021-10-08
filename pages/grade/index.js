@@ -57,7 +57,7 @@ export default function Home() {
 
   useEffect(() => {
     async function getCalendar() {
-      const result = await axios("https://www.googleapis.com/calendar/v3/calendars/7siodq5un9gqbqd4mmgf2poiqs@group.calendar.google.com/events?key=AIzaSyAIn8DyZFtthupLozgwIX3NUURFMWEIPb4&timeMin=2021-10-11T00%3A00%3A00.000Z&timeMax=2021-10-17T00%3A00%3A00.000Z&singleEvents=true&maxResults=9999&timeZone=UTC");
+      const result = await axios("https://www.googleapis.com/calendar/v3/calendars/7siodq5un9gqbqd4mmgf2poiqs@group.calendar.google.com/events?key=AIzaSyAIn8DyZFtthupLozgwIX3NUURFMWEIPb4&timeMin=2021-10-11T00%3A00%3A00.000Z&timeMax=2021-10-18T00%3A00%3A00.000Z&singleEvents=true&maxResults=9999&timeZone=UTC");
       const data = result.data;
       const eventsGrouped = groupEvents(data.items);
 
