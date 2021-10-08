@@ -10,9 +10,8 @@ function convertTZ(date, tzString) {
 }
 
 function groupEvents(events) {
-  events.sort((a, b) => {
-    return a.start.dateTime > b.start.dateTime
-  });
+  events.sort((a, b) => a.start.dateTime < b.start.dateTime ? -1 : 1);
+
   var groupedEvents = {}
   const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   for (var event of events) {
