@@ -49,6 +49,11 @@ function groupEvents(events) {
   return groupedEvents;
 }
 
+function currentDateFormated(currentDate) {
+  const date = new Date(currentDate);
+  return `${date.getDate()} de Novembro`;
+}
+
 export default function Home() {
 
   const [calendar, setCalendar] = useState(null);
@@ -80,8 +85,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <CalendarHeader name={calendar.summary} groups={events} activeDate={currentDate} selectDateCallback={setCurrentDate}/>
-      <div className="xl:max-w-screen-xl xl:mx-auto p-2 space-y-4 text-gray-500 text-right">
-        Fuso Horário: {timezone}
+      <div className="flex flex-col xl:flex-row space-y-1 xl:max-w-screen-xl xl:mx-auto p-2 text-gray-500 text-right">
+        <div>{currentDateFormated(currentDate)}</div>
+        <div className="flex-grow"></div>
+        <div>Fuso Horário: {timezone}</div>
       </div>
 
       <CalendarEvents events={events[currentDate]} />
