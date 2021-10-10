@@ -52,8 +52,7 @@ class Event extends Component {
         ]).join(" "),
       },
     };
-
-    return room ? colors[room] : {
+    return room && colors[room] ? colors[room] : {
       "base": baseClasses.concat([
         "text-gray-700",
         "bg-white",
@@ -118,7 +117,7 @@ class Event extends Component {
 
     const colors = this.getColors(location);
     return (
-      <div className={`flex xl:flex-1 flex-col space-y-1 py-4 px-4 ${colors.base} ${colors.hover} ${location}`}>
+      <div className={`event-card flex xl:flex-1 flex-col space-y-1 py-4 px-4 min-w-10 ${colors.base} ${colors.hover} ${location}`}>
         <div className={`xl:flex-grow xl:mb-6`}>
           {this.renderSummary(type, summary, description)}
         </div>
@@ -143,7 +142,7 @@ class EventSlot extends Component {
           <div className="text-gray-500 px-4">-</div>
           <div>{this.props.endHour}</div>
         </div>
-        <div className="w-full xl:flex">
+        <div className="w-full xl:flex flex-wrap">
           {events}
         </div>
       </div>
