@@ -51,7 +51,7 @@ function groupEvents(events) {
 
 function currentDateFormated(currentDate) {
   const date = new Date(currentDate);
-  return `${date.getDate()} de Novembro`;
+  return `${date.getDate()} de Outubro`;
 }
 
 export default function Home() {
