@@ -18,7 +18,7 @@ a{
 }
 
 .nav-item {
-  margin: 0 15px;
+  margin: 0 9px;
   font-weight: 600;
 }
 
@@ -159,6 +159,35 @@ nav.shift ul li a:hover:after {
 }
 
 .overflow-hidden { overflow: hidden; }
+
+
+/*
+ * Lives
+ */
+ .lives {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+  padding: 20px 0;
+}
+
+.lives .talks {
+  margin: 20px;
+  display: block;
+}
+
+.lives .talks iframe {
+  width: 560px;
+  height: 315px;
+}
+
+@media screen and (min-width: 720px) {
+  .lives .talks iframe {
+    width: 300px;
+    height: 175px;
+  }
+}
 
 
 /*
