@@ -54,6 +54,13 @@ function currentDateFormated(currentDate) {
   return `${date.getDate()} de Outubro`;
 }
 
+function pickCurrentDate(eventDates) {
+  const today = new Date(new Date().toDateString()).getTime();
+  const dates = eventDates.map(eventDate => new Date(eventDate).getTime());
+
+  return eventDates.find((_, index) => dates[index] === today) ?? eventDates[0];
+}
+
 export default function Home() {
 
   const [calendar, setCalendar] = useState(null);
@@ -68,7 +75,7 @@ export default function Home() {
 
       setCalendar(data);
       setEvents(eventsGrouped);
-      setCurrentDate(Object.keys(eventsGrouped)[0]);
+      setCurrentDate(pickCurrentDate(Object.keys(eventsGrouped)));
     };
     getCalendar();
   }, []);
