@@ -113,7 +113,7 @@ class Event extends Component {
 
   render() {
     const {summary, description, location} = this.props.event;
-    const {type, author, youtube_channel} = this.props.event.extendedProperties.private;
+    const {type, author, youtube_link} = this.props.event.extendedProperties.private;
 
     const colors = this.getColors(location);
     return (
@@ -125,7 +125,7 @@ class Event extends Component {
           {author && this.renderLabel("🐍", author)}
           {location && this.renderLabel("📍", location)}
           <div className="flex-grow xl:hidden"></div>
-          <div>🎬 {this.renderLive(youtube_channel)}</div>
+          <div>🎬 {this.renderLive(youtube_link)}</div>
         </div>
       </div>
     );
