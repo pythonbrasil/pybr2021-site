@@ -7,8 +7,12 @@ module.exports = {
         destination: "/doacoes.html",
       },
       {
-        source: "/doacoes.html",
-        destination: "/doacoes.html",
+        source: "/prestacao-contas",
+        destination: "/prestacao-contas.html",
+      },
+      {
+        source: "/perguntas-frequentes",
+        destination: "/perguntas-frequentes.html",
       },
       {
         source: "/",
